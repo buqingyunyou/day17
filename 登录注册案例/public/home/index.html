@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>首页</title>
+</head>
+<body>
+  <h1>首页</h1>
+  <h3 id="userH3">欢迎您: xxx</h3>
+
+  <script>
+    /* 
+      window有一个location属性,属性值是一个对象, 其指向浏览器的地址栏
+        location对象的属性:
+          href属性, 保存的是完整的url
+          search属性, 保存的是url中的查询字符串 ?xxx=xxx
+    */
+    let username = location.search.split('=')[1]
+    document.getElementById('userH3').textContent = '欢迎您: '+username;
+
+  </script>
+</body>
+</html>
